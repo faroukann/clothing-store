@@ -29,7 +29,8 @@
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
-  body{
+  html{overflow-x:hidden;}
+  body{overflow-x:hidden;
     font-family:var(--font-body);
     color:var(--text);
     background:var(--bg);
@@ -167,7 +168,8 @@
   .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
   .story h2{font-family:var(--font-display);font-weight:700;font-size:30px;margin-bottom:16px;}
   .story p{color:var(--text-soft);margin-bottom:24px;max-width:460px;}
-  .stats{display:flex;gap:40px;}
+  .stats{display:flex;gap:40px;flex-wrap:wrap;}
+  .stat{min-width:0;}
   .stat .num{font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--accent);}
   .stat .label{font-size:13px;color:var(--text-soft);}
 
@@ -251,6 +253,10 @@
   @media (max-width:860px){
     .hero-grid,.story-grid{grid-template-columns:1fr;}
     .hero-art{order:-1;max-width:320px;margin:0 auto;}
+    .story-grid > div:not(.hero-art){text-align:center;}
+    .story p{margin-left:auto;margin-right:auto;}
+    .stats{justify-content:center;}
+    .stat{text-align:center;}
     .nav-links{
       position:fixed;top:90px;right:0;left:0;background:#fff;flex-direction:column;
       padding:20px 24px;border-bottom:0.5px solid var(--border);
@@ -261,7 +267,9 @@
   }
   @media (max-width:480px){
     .hero h1{font-size:32px;}
-    .stats{gap:24px;}
+    .stats{gap:18px;}
+    .stat .num{font-size:24px;}
+    .wrap{padding:0 16px;}
   }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
