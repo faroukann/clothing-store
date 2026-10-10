@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@800&amp;display=swap');
+      .word{ font-family:'Cairo', sans-serif; font-weight:800; font-size:28px; letter-spacing:5px; fill:#22314F; }
+    </style>
+  </defs>
+  <circle cx="110" cy="80" r="58" fill="none" stroke="#22314F" stroke-width="1.6"/>
+  <path d="M82 52 L110 108 L138 52" fill="none" stroke="#22314F" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="110" y="185" text-anchor="middle" class="word">VIRAFE</text>
+</svg>
